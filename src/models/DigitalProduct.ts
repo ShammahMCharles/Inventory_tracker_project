@@ -8,10 +8,17 @@ fileSize:number;
     this.fileSize = fileSize;
     }
 
-    displayDetails(): string{
-    return `item ${this.sku} ${this.name} costs 
-    $${this.price} and is a digital 
-    download of ${this.fileSize}MB`
+    override getPriceWithTax(): number {
+    return 0;
     }
 
+
+    displayDetails(): string{
+    return super.displayDetails() +`digital download of ${this.fileSize}MB`
+    }
 }
+
+
+
+// const product = new Product("890", "laptop", 50);
+// console.log(product.getPriceWithTax());

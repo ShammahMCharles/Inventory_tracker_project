@@ -10,12 +10,13 @@ export class Product {
     }
 
 
-     getPriceWithTax ():number {
-        return Number((this.price * 1.5).toFixed(2));
+    getPriceWithTax(): number {
+        return Number(this.price.toFixed(2));
     }
 
     displayDetails(): string{
-        return `${this.name} sku number ${this.sku} cost $${this.price} .`
+        return `${this.name} sku number 
+        ${this.sku} cost $${this.price} .`
     }
 
    

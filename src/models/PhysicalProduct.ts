@@ -8,13 +8,11 @@ weight:number;
     this.weight = weight;
     }
 
-    displayDetails(): string{
-    return ` item ${this.sku} ${this.name} costs 
-    $${this.price} weights ${this.weight}MB`
-    }
-
     override getPriceWithTax(): number {
         return this.price * 0.10;
     }
 
+    displayDetails(): string{
+    return super.displayDetails() +`It weights ${this.weight}kg`
+    }
 }
