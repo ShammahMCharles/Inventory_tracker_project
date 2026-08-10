@@ -11,7 +11,7 @@ export class Product {
 
 
     getPriceWithTax(): number {
-        return Number(this.price.toFixed(2));
+        return this.price;
     }
 
     displayDetails(): string{
